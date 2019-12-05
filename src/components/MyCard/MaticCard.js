@@ -121,7 +121,7 @@ class MaticCard extends React.Component {
                   <a href="#">MOVE TO MATIC</a>
                 </div>}
                 <div onClick={this.buyHandler} className="btn-bid">
-                  <a onClick={this.swapActions}>TRANSFER</a>
+                  <a >TRANSFER</a>
                 </div>
                 {
                   buyBut ? 
@@ -130,7 +130,7 @@ class MaticCard extends React.Component {
                   </div>
                   :
                   <div onClick={this.buyHandler} className="btn-buy">
-                    <a href="#">SELL</a>
+                    <a onClick={this.swapActions}>SELL</a>
                   </div>
 
                 }
