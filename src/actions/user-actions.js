@@ -150,12 +150,8 @@ export const depositERC721_token = (id) => async (dispatch, getState) => {
 
 export const swap_action = (token) => async (dispatch, getState) => {
   const userState = getState().user;
-  console.log('swap_action called');
   console.log(userState);
-
   console.log(userState.accounts[0]);
-
-  // 0x9f - nft id 1, create order for X amount of erc20s
 
   const mappedErc20 = '0x75c2297b3a0157aB2815D40D17c1C8b45d5eAF3b';
   const mappedErc721 = '0x4dDf4f09E98309B8Bd1DAdFDa175004eE0662d76';
@@ -184,16 +180,12 @@ export const swap_action = (token) => async (dispatch, getState) => {
       if(err) {
         return console.error(err);
       }
-      console.log("result: ", result);
       signature = result.result.substring(2);
-      const r = "0x" + signature.substring(0, 64);
-      const s = "0x" + signature.substring(64, 128);
-      const v = parseInt(signature.substring(128, 130), 16);
+      // const r = "0x" + signature.substring(0, 64);
+      // const s = "0x" + signature.substring(64, 128);
+      // const v = parseInt(signature.substring(128, 130), 16);
 
-      console.log("signature: ", signature);
-      console.log("r: ", r);
-      console.log("s: ", s);
-      console.log("v: ", v);
+      console.log("signature: ", signature)
       console.log(token, dispatch);
       dispatch({type : types.ADD_SIG, token, sig: signature});
       set(token+'', signature);

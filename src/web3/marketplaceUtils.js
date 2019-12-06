@@ -1,12 +1,6 @@
 const ethUtils = require('ethereumjs-util')
 const sigUtils = require('eth-sig-util')
 
-// token2 = jo chahiye
-// amount2 = amount of token2
-// tokenAddress = jo token hai, uska address
-// spender = marketplace/ swapping contract ka address
-// tokenIdAmount = jo token hai uska amount/tokenid
-// expiration = number of blocks jiske baad invalidate karna hai (0 means inf.)
 exports.getTypedData = function ({
     orderId, token2, amount2, tokenAddress, spender, tokenIdOrAmount, expiration
 }){
@@ -26,7 +20,6 @@ function getOrderData({
         ethUtils.setLengthLeft(amount2, 32)
     ]);
     const orderDataHash = ethUtils.keccak256(orderData)
-    console.log('returning order data hash - ', orderDataHash)
     return orderDataHash;
 }
 
