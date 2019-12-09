@@ -4,7 +4,7 @@
   "description": "Project for paracosmic",
   "main": "sessionVariables.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run open:src\" \"npm run lint:watch\"",
+    "start": "concurrently --kill-others \"npm run open:src\"",
     "server": "nodemon --exec babel-node server/index.js",
     "build": "ENV='production' babel-node tools/build.js",
     "open:src": "babel-node tools/srcServer.js",

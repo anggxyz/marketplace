@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {Link } from 'react-router-dom';
 import './land-card.scss'
-import cardImg from '../assets/images/map3.png'
-import cardImgBig from '../assets/images/map-big.png'
+// import cardImg from '../assets/images/map3.png'
+// import cardImgBig from '../assets/images/map-big.png'
 import icons from '../../../services/icon-service.js'
 import plazaGreen from '../assets/images/icon-plaza-green.svg'
 import districtBlue from '../assets/images/icon-district-blue.svg'
@@ -24,38 +24,25 @@ class LandCard extends React.Component {
       gray,
       mana,
       manaSymbol,
-      big,
       index,
       my,
-      normal
+      image_url
     } = this.props
     
     return (
-      <div key={index}>
-        <Link key={index} to={my ? '/mycard/'+this.props.id : '/maticcard'} className={big ? 'land-card big' : 'land-card'}>
+      <div key={index} className="col-2">
+        <Link key={index} to={my ? '/mycard/'+this.props.id : '/maticcard'} className='land-card h-100'>
           <div className='land-card-preview'>
-            {normal && (
-              <img
-                src={cardImg}
-                alt='cardImg'
-                className='land-card-preview-image'
-              />
-            )}
-            {big && (
-              <img
-                src={cardImgBig}
-                alt='cardImgBig'
-                className='land-card-preview-image'
-              />
-            )}
+            <img
+              src={image_url}
+              alt='cardImg'
+              className='land-card-preview-image'
+            />
           </div>
           <div className='land-card-content'>
             <div className='land-card-content-text'>
               <div className='land-card-content-heading'>
                 <div className='land-card-content-title'>{name}</div>
-                {big && manaSymbol && (
-                  <div className='land-card-content-mana'>⏣ &nbsp; {mana}</div>
-                )}
               </div>
               <div className='land-card-content-date'>{months} MonthsAgo</div>
             </div>

@@ -1,0 +1,1338 @@
+[
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/2534-1555034342.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/2534-1555034342.jpg",
+    "name": "Long Sword of Life",
+    "description": "",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=2534",
+    "properties": {
+      "mint_number": 18,
+      "tactics": 13,
+      "weapon": "sword",
+      "required_level": 14,
+      "dexterity": 93,
+      "rarity": "rare",
+      "generation": 2,
+      "role": "DD"
+    },
+    "num_sales": 0,
+    "num_visitors": 14,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1555034343,
+    "listing_time": 1575851460.716108,
+    "sale_price": 0.264198629166,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 2534,
+    "token_id_str": "2534",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "K-Mart",
+      "address": "0xcecbe670c11d4d28678955f23e0d2d708d79c893"
+    },
+    "auctions": [],
+    "last_sale": {},
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 2896,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/15.png",
+          "address": "0xcecbe670c11d4d28678955f23e0d2d708d79c893",
+          "config": ""
+        },
+        "quantity": 1,
+        "listing_time": 1575851460.716108,
+        "price": 0.264198629166,
+        "price_in_usd": 40.03401827741511,
+        "bounty": 0.00264198629166,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "MANA",
+          "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+          "name": "Decentraland MANA",
+          "decimals": 18,
+          "eth_price": "0.000176132419444",
+          "usd_price": "0.026689345518276737"
+        },
+        "payment_token_price": 1500,
+        "payment_token_bounty": 15,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "MANA",
+          "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+          "name": "Decentraland MANA",
+          "decimals": 18,
+          "eth_price": "0.000176132419444",
+          "usd_price": "0.026689345518276737"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "default_to_fiat": false,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "sword",
+      "rare",
+      "DD"
+    ],
+    "is_bundle": false,
+    "objectID": "3518412"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1734-1553531144.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1734-1553531144.jpg",
+    "name": "Katana",
+    "description": "",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=1734",
+    "properties": {
+      "mint_number": 167,
+      "wisdom": 211,
+      "required_level": 26,
+      "weapon": "sword",
+      "rarity": "common",
+      "generation": 1,
+      "role": "HEAL"
+    },
+    "num_sales": 0,
+    "num_visitors": 1,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": true,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1553531146,
+    "listing_time": 1575836009.978976,
+    "sale_price": 0.42,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 1734,
+    "token_id_str": "1734",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "a0xx23",
+      "address": "0x35641673a0ce64f644ad2f395be19668a06a5616"
+    },
+    "auctions": [],
+    "last_sale": {},
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 4264,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/9.png",
+          "address": "0x35641673a0ce64f644ad2f395be19668a06a5616",
+          "config": ""
+        },
+        "quantity": 1,
+        "listing_time": 1575836009.978976,
+        "price": 0.42,
+        "price_in_usd": 63.7056,
+        "bounty": 0.0042,
+        "bounty_multiple": 0.01,
+        "expiration_time": 1576267880,
+        "payment_token": {
+          "symbol": "WETH",
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/WETH.png",
+          "name": "Wrapped Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "151.680000000000006821"
+        },
+        "payment_token_price": 0.42,
+        "payment_token_bounty": 0.0042,
+        "is_expiring": true,
+        "is_waiting_for_counterorder": true
+      },
+      "payment_tokens": [
+        {
+          "symbol": "WETH",
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/WETH.png",
+          "name": "Wrapped Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "151.680000000000006821"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "default_to_fiat": false,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "sword",
+      "common",
+      "HEAL"
+    ],
+    "is_bundle": false,
+    "objectID": "3272759"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1641-1553177269.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1641-1553177269.jpg",
+    "name": "Great Sword of Life",
+    "description": "",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=1641",
+    "properties": {
+      "mint_number": 14,
+      "tactics": 21,
+      "required_level": 18,
+      "weapon": "sword",
+      "generation": 1,
+      "dexterity": 126,
+      "rarity": "rare",
+      "role": "DD"
+    },
+    "num_sales": 0,
+    "num_visitors": 3,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1553177270,
+    "listing_time": 1575522146.946174,
+    "sale_price": 1,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 1641,
+    "token_id_str": "1641",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "Zonpower",
+      "address": "0x04b7dbd17a817d22ebd9b35a9a210d8e6e59a7ce"
+    },
+    "auctions": [],
+    "last_sale": {},
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 186,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/3.png",
+          "address": "0x04b7dbd17a817d22ebd9b35a9a210d8e6e59a7ce",
+          "config": "affiliate"
+        },
+        "quantity": 1,
+        "listing_time": 1575522146.946174,
+        "price": 1,
+        "price_in_usd": 149,
+        "bounty": 0.01,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "149.000000000000000000"
+        },
+        "payment_token_price": 1,
+        "payment_token_bounty": 0.01,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "149.000000000000000000"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "default_to_fiat": false,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "sword",
+      "rare",
+      "DD"
+    ],
+    "is_bundle": false,
+    "objectID": "3224052"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x23766996636058b41a041d441ce1217c694f5aa9/111-1549903607.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x23766996636058b41a041d441ce1217c694f5aa9/111-1549903607.jpg",
+    "name": "Pristine Chainbreaker",
+    "description": "In a series of events, a group of 300 slaves managed to break their chains and escape from their corrupted masters. Real names remain forgotten and their skin is said to be covered in ashes forever. They are recognized all across the realm.",
+    "external_link": "https://market.chainbreakers.io/units",
+    "properties": {
+      "weapon_slots": 1,
+      "tactics": 45,
+      "dexterity": 45,
+      "wisdom": 45,
+      "intellect": 45,
+      "vitality": 45,
+      "charisma": 45,
+      "generation": 0,
+      "armor_slots": 1
+    },
+    "num_sales": 1,
+    "num_visitors": 75,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1549735604,
+    "listing_time": 1575314269.476133,
+    "sale_price": 0.9,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 111,
+    "token_id_str": "111",
+    "asset_contract": {
+      "name": "Chainbreakers Units",
+      "address": "0x23766996636058b41a041d441ce1217c694f5aa9",
+      "default_to_fiat": false,
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "ShMat",
+      "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c"
+    },
+    "auctions": [],
+    "last_sale": {
+      "total_price_eth": 0.42,
+      "total_price": 0.42,
+      "timestamp": 1562669265,
+      "payment_token": {
+        "symbol": "ETH",
+        "address": "0x0000000000000000000000000000000000000000",
+        "image_url": null,
+        "name": "Ether",
+        "decimals": 18,
+        "eth_price": "1.000000000000000",
+        "usd_price": "147.740000000000009095"
+      }
+    },
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 11090,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/22.png",
+          "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c",
+          "config": ""
+        },
+        "quantity": 1,
+        "listing_time": 1575314269.476133,
+        "price": 0.9,
+        "price_in_usd": 132.966,
+        "bounty": 0.009,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "147.740000000000009095"
+        },
+        "payment_token_price": 0.9,
+        "payment_token_bounty": 0.009,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "147.740000000000009095"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "slug": null,
+    "is_bundle": false,
+    "_tags": [],
+    "objectID": "2871326"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/161-1554304936.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/161-1554304936.jpg",
+    "name": "Master Mace",
+    "description": "Once there was a master smith said to be able to craft magnificent weapons. One day he suddenly disappeared and with him all his weapons, except for this mace.",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=161",
+    "properties": {
+      "mint_number": 8,
+      "tactics": 33,
+      "vitality": 176,
+      "charisma": 218,
+      "role": "TANK",
+      "weapon": "mace",
+      "required_level": 29,
+      "rarity": "epic",
+      "generation": 0
+    },
+    "num_sales": 1,
+    "num_visitors": 39,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1541178757,
+    "listing_time": 1575314159.275883,
+    "sale_price": 2.25,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 161,
+    "token_id_str": "161",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "default_to_fiat": false,
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "ShMat",
+      "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c"
+    },
+    "auctions": [],
+    "last_sale": {
+      "total_price_eth": 1.2403659760725,
+      "total_price": 7500,
+      "timestamp": 1563086717,
+      "payment_token": {
+        "symbol": "MANA",
+        "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+        "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+        "name": "Decentraland MANA",
+        "decimals": 18,
+        "eth_price": "0.000165382130143",
+        "usd_price": "0.024775896916661107"
+      }
+    },
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 11090,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/22.png",
+          "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c",
+          "config": ""
+        },
+        "quantity": 1,
+        "listing_time": 1575314159.275883,
+        "price": 2.25,
+        "price_in_usd": 337.0725,
+        "bounty": 0.0225,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "149.810000000000002274"
+        },
+        "payment_token_price": 2.25,
+        "payment_token_bounty": 0.0225,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "149.810000000000002274"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "mace",
+      "epic",
+      "TANK"
+    ],
+    "is_bundle": false,
+    "objectID": "2110767"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1963-1553707790.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1963-1553707790.jpg",
+    "name": "Scimitar",
+    "description": "",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=1963",
+    "properties": {
+      "mint_number": 72,
+      "required_level": 9,
+      "tactics": 36,
+      "weapon": "sword",
+      "rarity": "common",
+      "generation": 1,
+      "role": "DD"
+    },
+    "num_sales": 0,
+    "num_visitors": 2,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1553707792,
+    "listing_time": 1575159297.858343,
+    "sale_price": 0.05,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 1963,
+    "token_id_str": "1963",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "CubanRambo",
+      "address": "0x929a3a6f2439abc5b270b20d5dc025f11b4321da"
+    },
+    "auctions": [],
+    "last_sale": {},
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 3053,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/28.png",
+          "address": "0x929a3a6f2439abc5b270b20d5dc025f11b4321da",
+          "config": "affiliate"
+        },
+        "quantity": 1,
+        "listing_time": 1575159297.858343,
+        "price": 0.05,
+        "price_in_usd": 7.391,
+        "bounty": 0.0005,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "147.819999999999993179"
+        },
+        "payment_token_price": 0.05,
+        "payment_token_bounty": 0.0005,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "147.819999999999993179"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "default_to_fiat": false,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "sword",
+      "common",
+      "DD"
+    ],
+    "is_bundle": false,
+    "objectID": "3298248"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x38e908b70c8e0dcfe452c0fb2ebf432f9c5a6f20/307-1556652443.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x38e908b70c8e0dcfe452c0fb2ebf432f9c5a6f20/307-1556652443.jpg",
+    "name": "Baby Worm",
+    "description": "Some say he is the true ruler of the underworld, but probably just the world under the earth. Either way, he is a true champ.",
+    "external_link": "https://market.chainbreakers.io/",
+    "properties": {
+      "rarity": "common",
+      "generation": 0
+    },
+    "num_sales": 2,
+    "num_visitors": 23,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1556652447,
+    "listing_time": 1575114293.870293,
+    "sale_price": 0.2,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 307,
+    "token_id_str": "307",
+    "asset_contract": {
+      "name": "Chainbreakers Pets",
+      "address": "0x38e908b70c8e0dcfe452c0fb2ebf432f9c5a6f20",
+      "default_to_fiat": false,
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "ShMat",
+      "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c"
+    },
+    "auctions": [],
+    "last_sale": {
+      "total_price_eth": 0.06785362494,
+      "total_price": 400,
+      "timestamp": 1562709063,
+      "payment_token": {
+        "symbol": "MANA",
+        "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+        "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+        "name": "Decentraland MANA",
+        "decimals": 18,
+        "eth_price": "0.000169634062350",
+        "usd_price": "0.026106682195694855"
+      }
+    },
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 11090,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/22.png",
+          "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c",
+          "config": ""
+        },
+        "quantity": 1,
+        "listing_time": 1575114293.870293,
+        "price": 0.2,
+        "price_in_usd": 30.78,
+        "bounty": 0.002,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "153.900000000000005684"
+        },
+        "payment_token_price": 0.2,
+        "payment_token_bounty": 0.002,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "153.900000000000005684"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "common"
+    ],
+    "is_bundle": false,
+    "objectID": "3707748"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1172-1550046835.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1172-1550046835.jpg",
+    "name": "Executioner Sword of Life",
+    "description": "",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=1172",
+    "properties": {
+      "mint_number": 16,
+      "weapon": "sword",
+      "generation": 1,
+      "required_level": 22,
+      "rarity": "rare",
+      "dexterity": 187,
+      "tactics": 28,
+      "role": "DD"
+    },
+    "num_sales": 1,
+    "num_visitors": 47,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1550046837,
+    "listing_time": 1575114246.829091,
+    "sale_price": 0.47,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 1172,
+    "token_id_str": "1172",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "default_to_fiat": false,
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "ShMat",
+      "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c"
+    },
+    "auctions": [],
+    "last_sale": {
+      "total_price_eth": 0.254451093525,
+      "total_price": 1500,
+      "timestamp": 1563057236,
+      "payment_token": {
+        "symbol": "MANA",
+        "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+        "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+        "name": "Decentraland MANA",
+        "decimals": 18,
+        "eth_price": "0.000169634062350",
+        "usd_price": "0.026106682195694855"
+      }
+    },
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 11090,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/22.png",
+          "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c",
+          "config": ""
+        },
+        "quantity": 1,
+        "listing_time": 1575114246.829091,
+        "price": 0.47,
+        "price_in_usd": 72.333,
+        "bounty": 0.0047,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "153.900000000000005684"
+        },
+        "payment_token_price": 0.47,
+        "payment_token_bounty": 0.0047,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "153.900000000000005684"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "sword",
+      "rare",
+      "DD"
+    ],
+    "is_bundle": false,
+    "objectID": "2903573"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x23766996636058b41a041d441ce1217c694f5aa9/121-1549879107.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x23766996636058b41a041d441ce1217c694f5aa9/121-1549879107.jpg",
+    "name": "▒ EB 4 ▒\t",
+    "description": "In a series of events, a group of 300 slaves managed to break their chains and escape from their corrupted masters. Real names remain forgotten and their skin is said to be covered in ashes forever. They are recognized all across the realm.",
+    "external_link": "https://market.chainbreakers.io/units",
+    "properties": {
+      "armor_slots": 1,
+      "generation": 0,
+      "charisma": 45,
+      "vitality": 45,
+      "intellect": 45,
+      "wisdom": 45,
+      "dexterity": 45,
+      "tactics": 45,
+      "weapon_slots": 1
+    },
+    "num_sales": 1,
+    "num_visitors": 18,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1549879110,
+    "listing_time": 1575114172.345081,
+    "sale_price": 0.8,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 121,
+    "token_id_str": "121",
+    "asset_contract": {
+      "name": "Chainbreakers Units",
+      "address": "0x23766996636058b41a041d441ce1217c694f5aa9",
+      "default_to_fiat": false,
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "ShMat",
+      "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c"
+    },
+    "auctions": [],
+    "last_sale": {
+      "total_price_eth": 0.4,
+      "total_price": 0.4,
+      "timestamp": 1563003601,
+      "payment_token": {
+        "symbol": "ETH",
+        "address": "0x0000000000000000000000000000000000000000",
+        "image_url": null,
+        "name": "Ether",
+        "decimals": 18,
+        "eth_price": "1.000000000000000",
+        "usd_price": "153.900000000000005684"
+      }
+    },
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 11090,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/22.png",
+          "address": "0xd5ed2d40d789da83062f0786c95b9c1342ce765c",
+          "config": ""
+        },
+        "quantity": 1,
+        "listing_time": 1575114172.345081,
+        "price": 0.8,
+        "price_in_usd": 123.12,
+        "bounty": 0.008,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "153.900000000000005684"
+        },
+        "payment_token_price": 0.8,
+        "payment_token_bounty": 0.008,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "153.900000000000005684"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [],
+    "is_bundle": false,
+    "objectID": "2890471"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/2507-1554440400.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/2507-1554440400.jpg",
+    "name": "Sorcerer's Garb of Mind",
+    "description": "Part of a set of two armors. Passed down from magician to magician this garb bestows upon its owner the ability to create powerful healing spells.",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=2507",
+    "properties": {
+      "mint_number": 9,
+      "intellect": 10,
+      "generation": 1,
+      "required_level": 1,
+      "movement": "medium",
+      "protection": "medium",
+      "role": "HEAL",
+      "rarity": "epic"
+    },
+    "num_sales": 0,
+    "num_visitors": 3,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1554440401,
+    "listing_time": 1575062167.764136,
+    "sale_price": 0.501915395850077,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 2507,
+    "token_id_str": "2507",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "EB",
+      "address": "0x2fef65e4d69a38bf0dd074079f367cdf176ec0de"
+    },
+    "auctions": [],
+    "last_sale": {},
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 2459,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/9.png",
+          "address": "0x2fef65e4d69a38bf0dd074079f367cdf176ec0de",
+          "config": "affiliate"
+        },
+        "quantity": 1,
+        "listing_time": 1575062167.764136,
+        "price": 0.501915395850077,
+        "price_in_usd": 74.19815296843753,
+        "bounty": 0.00501915395850077,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "MANA",
+          "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+          "name": "Decentraland MANA",
+          "decimals": 18,
+          "eth_price": "0.000167360918923",
+          "usd_price": "0.024740964644360628"
+        },
+        "payment_token_price": 2999,
+        "payment_token_bounty": 29.99,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "MANA",
+          "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+          "name": "Decentraland MANA",
+          "decimals": 18,
+          "eth_price": "0.000167360918923",
+          "usd_price": "0.024740964644360628"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "default_to_fiat": false,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "epic",
+      "HEAL",
+      "medium",
+      "medium"
+    ],
+    "is_bundle": false,
+    "objectID": "3443064"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/2506-1554440400.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/2506-1554440400.jpg",
+    "name": "Barbarian's Garb of Accuracy",
+    "description": "Part of a set of two armors. Once there existed a tribe of ruthless barbarians who wore this outfit to battle. It grants its wearer a sharp eye and the focus to never miss a target.",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=2506",
+    "properties": {
+      "mint_number": 8,
+      "dexterity": 10,
+      "movement": "fast",
+      "generation": 1,
+      "required_level": 1,
+      "protection": "low",
+      "rarity": "epic",
+      "role": "DD"
+    },
+    "num_sales": 0,
+    "num_visitors": 4,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1554440401,
+    "listing_time": 1575062152.444725,
+    "sale_price": 0.505437495417413,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 2506,
+    "token_id_str": "2506",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "EB",
+      "address": "0x2fef65e4d69a38bf0dd074079f367cdf176ec0de"
+    },
+    "auctions": [],
+    "last_sale": {},
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 2459,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/9.png",
+          "address": "0x2fef65e4d69a38bf0dd074079f367cdf176ec0de",
+          "config": "affiliate"
+        },
+        "quantity": 1,
+        "listing_time": 1575062152.444725,
+        "price": 0.505437495417413,
+        "price_in_usd": 76.66475930501329,
+        "bounty": 0.00505437495417413,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "MANA",
+          "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+          "name": "Decentraland MANA",
+          "decimals": 18,
+          "eth_price": "0.000168535343587",
+          "usd_price": "0.025563440915309529"
+        },
+        "payment_token_price": 2999,
+        "payment_token_bounty": 29.99,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "MANA",
+          "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+          "image_url": "https://storage.googleapis.com/opensea-static/tokens/MANA.png",
+          "name": "Decentraland MANA",
+          "decimals": 18,
+          "eth_price": "0.000168535343587",
+          "usd_price": "0.025563440915309529"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "default_to_fiat": false,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "epic",
+      "low",
+      "DD",
+      "fast"
+    ],
+    "is_bundle": false,
+    "objectID": "3443065"
+  },
+  {
+    "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1425-1553075813.jpg",
+    "image_preview_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db/1425-1553075813.jpg",
+    "name": "Battle Hammer",
+    "description": "",
+    "external_link": "https://market.chainbreakers.io/marketplace?token=1425",
+    "properties": {
+      "mint_number": 27,
+      "weapon": "mace",
+      "rarity": "common",
+      "required_level": 12,
+      "generation": 1,
+      "wisdom": 54,
+      "role": "HEAL"
+    },
+    "num_sales": 0,
+    "num_visitors": 4,
+    "on_sale": true,
+    "has_bounty": true,
+    "has_offers": false,
+    "on_auction": false,
+    "has_image": true,
+    "nsfw": false,
+    "hidden": false,
+    "background_color": "303030",
+    "created_date": 1553075814,
+    "listing_time": 1574671349.484755,
+    "sale_price": 0.015,
+    "is_opensea": true,
+    "is_presale": false,
+    "supports_wyvern": true,
+    "token_id": 1425,
+    "token_id_str": "1425",
+    "asset_contract": {
+      "name": "Chainbreakers Items",
+      "address": "0x0111ac7e9425c891f935c4ce54cf16db7c14b7db",
+      "asset_contract_type": "non-fungible"
+    },
+    "owner": {
+      "name": "Hero212",
+      "address": "0x370d28491012b433fa9282db52e585c6ae6ede16"
+    },
+    "auctions": [],
+    "last_sale": {},
+    "order_metadata": {
+      "lowest_sell_order": {
+        "maker": {
+          "user": 4980,
+          "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/19.png",
+          "address": "0x370d28491012b433fa9282db52e585c6ae6ede16",
+          "config": "affiliate"
+        },
+        "quantity": 1,
+        "listing_time": 1574671349.484755,
+        "price": 0.015,
+        "price_in_usd": 2.22885,
+        "bounty": 0.00015,
+        "bounty_multiple": 0.01,
+        "expiration_time": 0,
+        "payment_token": {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "148.590000000000003411"
+        },
+        "payment_token_price": 0.015,
+        "payment_token_bounty": 0.00015,
+        "is_expiring": false,
+        "is_waiting_for_counterorder": false
+      },
+      "payment_tokens": [
+        {
+          "symbol": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "image_url": null,
+          "name": "Ether",
+          "decimals": 18,
+          "eth_price": "1.000000000000000",
+          "usd_price": "148.590000000000003411"
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": 2384,
+        "default_to_fiat": false,
+        "name": "Chainbreakers",
+        "hidden": false,
+        "image_url": "https://storage.opensea.io/0x0111ac7e9425c891f935c4ce54cf16db7c14b7db-featured-1556588713.jpg",
+        "slug": "chainbreakers",
+        "display_data": {
+          "card_display_style": "padded"
+        }
+      }
+    ],
+    "_tags": [
+      "mace",
+      "common",
+      "HEAL"
+    ],
+    "is_bundle": false,
+    "objectID": "3212348"
+  }
+]

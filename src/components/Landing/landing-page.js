@@ -38,11 +38,6 @@ class LandingPage extends React.Component {
             ) : (
               cards.map((e, i) => <LandCard {...e} index={i} normal />)
             )}
-            {/* {!this.state.isLoading &&
-              } */}
-            {/* {cards.map((e, i) => (
-              <LandCard {...e} index={i} normal />
-            ))} */}
           </div>
         </div>
       </div>

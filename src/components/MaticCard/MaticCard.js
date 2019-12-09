@@ -54,7 +54,7 @@ class MaticCard extends React.Component {
               </div>
             )}
             <div className="card-img">
-              <img src={img}></img>
+              <img ></img>
             </div>
           </div>
           <div className="card-details">

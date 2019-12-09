@@ -8,7 +8,6 @@
 	border-radius: 0.28571429rem !important;
 	margin: 5px;
 	//margin-right: 25px !important;
-	height: 250px;
 	color: $text;
 
 	&-preview {
@@ -89,6 +88,10 @@
 			padding: 4px;
 			margin-right: 5px;
 		}
+	}
+
+	.land-card-preview-image {
+		width: 100%;
 	}
 }
 
