@@ -82,7 +82,7 @@ class Marketplace extends React.Component {
     const max = 12;
     const sz = cards.length;
 
-    const currentCards = cards.slice((page - 1) * max, (page - 1) * max + max);
+    const currentCards = cards.slice(0, 12);
 
     // const defaultOption = options['Cheapest'];
     const options = ['Cheapest', 'Newest', 'Closest to Expire'];
