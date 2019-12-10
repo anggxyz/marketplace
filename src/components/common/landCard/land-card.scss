@@ -10,6 +10,15 @@
 	//margin-right: 25px !important;
 	color: $text;
 
+	&:hover{
+		color: $text;
+		text-decoration: none;
+		box-shadow:
+			0 0 8px 1px #fff,  /* inner white */
+			0 0 12px 2px #f0f, /* middle magenta */
+			0 0 16px 4px #0ff; /* outer cyan */
+	}
+
 	&-preview {
 		display: inline-block;
 		cursor: pointer;
@@ -20,26 +29,16 @@
 		// height: 132px;
 	}
 
+	
 	&-content {
+		.token-symbol {
+			height: 1rem;
+			width: auto;
+		}
+
 		position: relative;
 		padding: 1em;
 		cursor: pointer;
-
-		&-text {
-			display: flex;
-			flex-direction: column;
-		}
-
-		&-heading {
-			display: flex;
-			justify-content: space-between;
-			color: $blue;
-		}
-
-		&-date {
-			margin-bottom: 15px;
-			color: $gray;
-		}
 
 		&-title {
 			font-size: 15px;
@@ -50,59 +49,21 @@
 			display: flex;
 		}
 
-		&-info {
-			display: flex;
-			flex-flow: row;
+		.collection-name {
+			font-size: 0.75rem;
+			font-weight: 100;
+			margin-bottom: 0.75rem;
 		}
 
-		&-xy {
-			display: flex;
-			border: 1px solid $gray;
-			padding: 3px;
-			border-radius: 4px;
-			margin-right: 10px;
-			align-items: center;
-			position: relative;
-			padding: 2px 7px;
-			//font-size: 14px;
-			font-weight: 400;
-			font-size: 12px;
-			height: 28px;
-
-			& img {
-				width: 24px;
-				height: 24px;
-				border-radius: 0.28571429rem !important;
+		.prev-sale {
+			font-size: 0.75rem;
+			.token-symbol {
+				height: 0.75rem;
 			}
-
-			& svg {
-				margin-right: 5px;
-			}
-		}
-
-		&-image {
-			width: 24px;
-			height: 24px;
-			background-size: 50%;
-			border-radius: 4px;
-			padding: 4px;
-			margin-right: 5px;
 		}
 	}
 
 	.land-card-preview-image {
 		width: 100%;
 	}
-}
-
-.green {
-	background-color: $dark-green;
-}
-
-.blue {
-	background-color: #5054d4;
-}
-
-.gray {
-	background-color: $gray;
 }
