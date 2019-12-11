@@ -1,4 +1,7 @@
+@import '../common/styles/main';
+
 .card{
+    background-color: $background;
     .card-img-block{
         justify-content: center;
         display:flex;
@@ -346,4 +349,10 @@
             display :none;
         }
     }
+}
+
+.nftImage {
+    width: 400px;
+    margin-left: 80px;
+    border-radius: 1rem;
 }

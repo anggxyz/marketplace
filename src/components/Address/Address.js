@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import LandCard from '../common/landCard/landCard';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions/initActions';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './address.scss';
+import cards from '../../data/NFTList.json'
 
 class Address extends React.Component {
 
@@ -24,75 +23,20 @@ class Address extends React.Component {
   )
 
   render() {
-    const { cards } = this.props;
     return (
       <div>
-        {/* <NavBar Address="true" /> */}
-        <div className="Address-container">
-          <Tabs>
-            <div className="Address-container-menu">
-              <div
-                className="menu-container"
-                style={{ borderBottom: '2px solid rgba(34,36,38,.15)' }}>
-                <TabList className="menu-container-item">
-                  <Tab className="menu-item">Parcels</Tab>
-                  <Tab className="menu-item">Contribution</Tab>
-                  <Tab className="menu-item">On Sale</Tab>
-                  <Tab className="menu-item">Estates</Tab>
-                  <Tab className="menu-item">Bids</Tab>
-                  <Tab className="menu-item">Mortages</Tab>
-                </TabList>
-              </div>
+        <div className="marketplace-container container">
+          <div className="marketplace-container cards-collection">
+            <div className="marketplace-container cards">
+              {this.props.isFetching ? (
+                <img src={Loader} alt="Loading" className="Loader" />
+              ) : (
+                cards.slice(10,12).map((e, i) => (
+                  <LandCard {...e} key={i} index={i} normal />
+                ))
+              )}
             </div>
-            <TabPanel>
-              <div className="Address-container-cards-container">
-                <div className="Address-container-cards"></div>
-                <div className="Address-container-empty">
-                  {cards && cards.map(this.cardsUI)}
-                </div>
-              </div>
-            </TabPanel>
-            <TabPanel>
-              <div className="Address-container-cards-container">
-                <div className="Address-container-cards"></div>
-                <div className="Address-container-empty">
-                  The user has no Contributions
-                </div>
-              </div>
-            </TabPanel>
-            <TabPanel>
-              <div className="Address-container-cards-container">
-                <div className="Address-container-cards"></div>
-                <div className="Address-container-empty">
-                  The user has no Sales
-                </div>
-              </div>
-            </TabPanel>{' '}
-            <TabPanel>
-              <div className="Address-container-cards-container">
-                <div className="Address-container-cards"></div>
-                <div className="Address-container-empty">
-                  The user has no Estates
-                </div>
-              </div>
-            </TabPanel>{' '}
-            <TabPanel>
-              <div className="Address-container-cards-container">
-                <div className="Address-container-cards"></div>
-                <div className="Address-container-empty">
-                  The user has no Bids
-                </div>
-              </div>
-            </TabPanel>{' '}
-            <TabPanel>
-              <div className="Address-container-cards-container">
-                <div className="Address-container-cards"></div>
-                <div className="Address-container-empty">
-                  The user has no Mortages
-                </div>
-              </div>
-            </TabPanel>
-          </Tabs>
+          </div>
         </div>
       </div>
     );
