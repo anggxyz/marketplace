@@ -40,11 +40,11 @@ class Routes extends Component {
         new Web3(window.web3.currentProvider) :
         new Web3(new Web3("https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc")); //TODO insert custom key
 
-    web3.currentProvider.on('networkChanged', (e) => {
+    window.ethereum.autoRefreshOnNetworkChange = false;
+    window.ethereum.on('networkChanged', (e) => {
       store.dispatch(actions.matamask_login(e));
     })
     window.ethereum.on('accountsChanged', function (accounts) {
-      console.log(accounts);      
       store.dispatch(actions.matamask_login());
     })
   }

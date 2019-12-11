@@ -90,25 +90,24 @@ export const withdrawToken = (from, amount= '1000000000000000000', activity) => 
 }
 
 export const getBalanceMatic = async (from) => {
-    const token = config.MATIC_TEST_TOKEN;
+    const token = config.MATIC_MANA_TOKEN;
     const matic = getMatic()
     const balance = await matic.balanceOfERC20 (
         from, // User address
         token,  // Token address
     )
-    console.log('balance of matic', balance);
     
     return balance;
 }
 
 
 export const getBalanceRopsten = async (from) => {
+    const token = config.ROPSTEN_MANA_TOKEN;
     const matic = getMatic()
     const balance = await matic.balanceOfERC20 (
         from, // User address
         token,  // Token address
     )
-    console.log('balance of matic', balance);
     
     return balance;
 }

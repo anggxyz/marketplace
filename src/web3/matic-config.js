@@ -7,6 +7,8 @@ export default {
     'SYNCER_URL': 'https://matic-syncer2.api.matic.network/api/v1',
     'WATCHER_URL': 'https://ropsten-watcher2.api.matic.network/api/v1',
     'MATIC_TEST_TOKEN' : '0xc82c13004c06e4c627cf2518612a55ce7a3db699',
+    'MATIC_MANA_TOKEN' : '0xdd1b834a483fd754c8021ff0938f69c1d10da81f',
+    'ROPSTEN_MANA_TOKEN' : '0x2a8fd99c19271f4f04b1b7b9c4f7cf264b626edb',
 
     'ROPSTEN_ERC721_TEST_TOKEN' : '0x07d799252cf13c01f602779b4dce24f4e5b08bbd',
     'MATIC_ERC721_TEST_TOKEN' : '0x9f289a264b6db56d69ad53f363d06326b984e637',
