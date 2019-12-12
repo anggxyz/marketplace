@@ -42,6 +42,12 @@ class Routes extends Component {
 
     window.ethereum.autoRefreshOnNetworkChange = false;
     window.ethereum.on('networkChanged', (e) => {
+      if (e == "loading") {
+        return;
+      }
+      if (e != 3) {
+        alert("Please select ropsten network")
+      }
       store.dispatch(actions.matamask_login(e));
     })
     window.ethereum.on('accountsChanged', function (accounts) {
