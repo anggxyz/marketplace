@@ -7,7 +7,6 @@ import { Switch, Route } from 'react-router-dom';
 // Components import
 import LandingPage from './Landing/landing-page';
 // import Header from '../components/Header/Header.js';
-import Footer from '../components/Footer/Footer.js';
 import signIn from '../components/signIn/signIn.js';
 import colorKey from '../components/colorKey/colorKey.js';
 import NavBar from '../components/Navbar/Navbar';
@@ -86,7 +85,6 @@ class Routes extends Component {
               <Route exact path="/myland" component={Address} />
               <Route exact path="/notpartofdesign" component={NotPartOfDesign}/>
             </Switch>
-            <Footer />
           </div>
         </div>
       </div>

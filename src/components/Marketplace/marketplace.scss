@@ -2,7 +2,7 @@
 
 .marketplace-container {
 	display: flex;
-	min-height: calc(100% - var(--footer-height));
+	min-height: 100%;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	background: $gradient;
