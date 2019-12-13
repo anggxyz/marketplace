@@ -4,7 +4,7 @@ import LandCard from '../common/landCard/landCard';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions/initActions';
 import './address.scss';
-import cards from '../../data/NFTList.json'
+import masterNTFList from '../../data/NFTList.json'
 
 class Address extends React.Component {
 
@@ -22,6 +22,12 @@ class Address extends React.Component {
       "mana":"72-559-2671"}} my={true} key={card} index={card} normal />
   )
 
+  get userNfts() {
+    return masterNTFList.filter(nft => {
+      return this.props.cards.includes(nft.token_id_str)
+    })
+  }
+
   render() {
     return (
       <div>
@@ -31,7 +37,7 @@ class Address extends React.Component {
               {this.props.isFetching ? (
                 <img src={Loader} alt="Loading" className="Loader" />
               ) : (
-                cards.slice(10,12).map((e, i) => (
+                this.userNfts.map((e, i) => (
                   <LandCard {...e} key={i} index={i} normal />
                 ))
               )}
