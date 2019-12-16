@@ -8,7 +8,7 @@ import wallet from '../common/assets/images/square.png';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
 import * as actions from '../../actions/user-actions'
-import cards from '../../data/NFTList.json'
+import masterNFTList from '../../data/NFTList.json'
 import MANA from '../common/assets/images/MANA.png';
 import WETH from '../common/assets/images/WETH.png';
 import ETH from '../common/assets/images/ETH.png';
@@ -16,6 +16,7 @@ import ETH from '../common/assets/images/ETH.png';
 class MaticCard extends React.Component {
   id = null;
   nftDetails = null;
+  isOwner = false;
 
   constructor(props) {
     super(props);
@@ -24,10 +25,11 @@ class MaticCard extends React.Component {
     };
     this.id = this.props.match.params.id;
     this.fetchNftDetails();
+    this.isOwner = this.props.userNFTList.includes(this.nftDetails.token_id_str)
   }
 
   fetchNftDetails() {
-    this.nftDetails = cards.find(card => this.id == card.token_id);
+    this.nftDetails = masterNFTList.find(nft => this.id == nft.token_id);
     if (!this.nftDetails) {
       console.error("Invalid id");
     }
@@ -206,10 +208,12 @@ const mapStateToProps = (state) => {
   const isSignIn = state.user.is_sign_in;
   const networkID = state.user.network;
   const sigs = state.user.sigs;
+  const userNFTList = state.user.erc721 
   return {
     isSignIn,
     networkID,
-    sigs
+    sigs,
+    userNFTList
   };
 };
 
