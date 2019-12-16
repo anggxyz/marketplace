@@ -5,7 +5,6 @@ exports.getTypedData = function ({
     orderId, token2, amount2, tokenAddress, spender, tokenIdOrAmount, expiration
 }){
     const data = getOrderData(orderId, token2, amount2);
-    console.log("data: ", data)
     return getTransferTypedData({
       tokenAddress, spender, tokenIdOrAmount, data, expiration
     });

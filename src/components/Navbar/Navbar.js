@@ -46,14 +46,11 @@ class NavBar extends React.Component {
   }
 
   openMatNet = () => {
-    console.log('called');
-    
     this.props.actions.matic_net_o();
   }
 
   navBarClickHandler = () => {
     const newState = { ...this.state, topNav: !this.state.topNav };
-    console.log(newState);
     this.setState(newState);
   };
 
@@ -99,7 +96,7 @@ class NavBar extends React.Component {
                 <Link to="/marketplace" className="sidebar-item enabled">
                   Marketplace
                 </Link>
-                <Link to="/myland" className="sidebar-item enabled">
+                <Link to="/userassets" className="sidebar-item enabled">
                   Myassets
                 </Link>
                 {isActivity && (
@@ -120,7 +117,7 @@ class NavBar extends React.Component {
             </NavLink>
             {
               isSignIn && 
-              <NavLink to="/myland" activeClassName="enabled" className="Navigation-item">
+              <NavLink to="/userassets" activeClassName="enabled" className="Navigation-item">
                 Myassets
               </NavLink>
             }

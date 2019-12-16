@@ -20,7 +20,7 @@ const getWeb3 = () => new Promise((resolve) => {
       // Acccounts always exposed
       resolve(currentWeb3);
     } else {
-      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+      console.error('Non-Ethereum browser detected. You should consider trying MetaMask!');
     }
   });
 });

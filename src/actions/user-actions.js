@@ -29,7 +29,6 @@ export const matamask_login = (id) => async (dispatch) => {
     const accounts = await ethereum.enable();
     web3 = new Web3(window.web3.currentProvider) 
     var network = id || await web3.eth.net.getId();
-    console.log('called mm login', network);
     
     if(network==3) {
       const balance = await matic_js.getBalanceRopsten(accounts[0]);
@@ -47,7 +46,6 @@ export const matamask_login = (id) => async (dispatch) => {
         //c is 3 for repsten newtwork
         //c is more than 3 for other network
         //so if c is greater than 3 we assume that it is on matic network
-      console.log('balance', balance);
       dispatch({type: types.METAMASK_LOGIN, payload : accounts, network , balance: balance});
       dispatch(login_popup_c());
       const balanceERC721 = await matic_js.getBalance721Matic(accounts[0]);
@@ -61,7 +59,6 @@ export const matamask_login = (id) => async (dispatch) => {
     }
     else {
     }
-    // console.log(rpc);
 }
 
 export const check_allowance = () => async (dispatch, getState) => {
@@ -108,7 +105,6 @@ export const deposit_token = () => async (dispatch, getState) => {
     dispatch(push('/activity'));
     h = hash;
   })
-  console.log('allowance', allowance);
   dispatch(minus_mana(userState.add_fund));
   dispatch(activity_actions.activity_succ(h));
 }
@@ -121,7 +117,6 @@ export const move_to_matic = (amount) => async (dispatch, getState) => {
     dispatch(push('/activity'));
     hash = h;
   })
-  console.log('allowance', allowance);
   dispatch(activity_actions.activity_succ(hash));
 }
 
@@ -150,8 +145,6 @@ export const depositERC721_token = (id) => async (dispatch, getState) => {
 
 export const swap_action = (token) => async (dispatch, getState) => {
   const userState = getState().user;
-  console.log(userState);
-  console.log(userState.accounts[0]);
 
   const mappedErc20 = '0x75c2297b3a0157aB2815D40D17c1C8b45d5eAF3b';
   const mappedErc721 = '0x4dDf4f09E98309B8Bd1DAdFDa175004eE0662d76';
@@ -185,13 +178,9 @@ export const swap_action = (token) => async (dispatch, getState) => {
       // const s = "0x" + signature.substring(64, 128);
       // const v = parseInt(signature.substring(128, 130), 16);
 
-      console.log("signature: ", signature)
-      console.log(token, dispatch);
       dispatch({type : types.ADD_SIG, token, sig: signature});
       set(token+'', signature);
       const data1 = encode(mappedErc20, result.result, tokenId);
-      console.log('data1',data1);
-
     }
   )
 }

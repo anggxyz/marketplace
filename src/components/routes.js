@@ -8,17 +8,14 @@ import { Switch, Route } from 'react-router-dom';
 import LandingPage from './Landing/landing-page';
 // import Header from '../components/Header/Header.js';
 import signIn from '../components/signIn/signIn.js';
-import colorKey from '../components/colorKey/colorKey.js';
 import NavBar from '../components/Navbar/Navbar';
 import WhyMatic from '../components/WhyMatic/WhyMatic';
 import Marketplace from '../components/Marketplace/Marketplace.js';
 import Wallet from '../components/Wallet/Wallet.js';
 import Activity from '../components/Activity/Activity.js';
-import MaticCard from '../components/MaticCard/MaticCard.js';
 import MyCard from '../components/MyCard/MaticCard';
-import AddFund from '../components/AddFund/AddFund.js';
 import MaticNetwork from '../components/MaticNetwork/MaticNetwork.js';
-import Address from '../components/Address/Address.js';
+import UserAssets from '../components/UserAssets/UserAssets';
 import NotPartOfDesign from '../components/NotPartOfDesign/NotPartOfDesign.js'
 import { store } from '../index';
 
@@ -72,17 +69,14 @@ class Routes extends Component {
             <Switch location={this.props.location}>
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/signin" component={signIn} />
-              <Route exact path="/colorKey" component={colorKey} />
               <Route exact path="/whymatic" component={WhyMatic} />
               <Route exact path="/marketplace/:page" component={Marketplace} />
               <Route exact path="/marketplace" component={Marketplace} />
               <Route exact path="/wallet" component={Wallet} />
               <Route exact path="/activity" component={Activity} />
-              <Route exact path="/addfund" component={AddFund} />
-              <Route exact path="/maticcard" component={MaticCard} />
               <Route exact path="/mycard/:id" component={MyCard} />
               <Route exact path="/maticnetwork" component={MaticNetwork} />
-              <Route exact path="/myland" component={Address} />
+              <Route exact path="/userassets" component={UserAssets} />
               <Route exact path="/notpartofdesign" component={NotPartOfDesign}/>
             </Switch>
           </div>

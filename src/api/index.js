@@ -12,7 +12,6 @@ export const get = (path, token) => {
         return response.json()
       }
     }).then((data) => {
-      console.log(data, 'api data');
       
       return resolve(data)
     }).catch((err) => {

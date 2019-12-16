@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from '../../actions/initActions';
 import { Link } from 'react-router-dom';
 import './landing-page.scss';
 import Icons from '../../services/icon-service';
-import LandCard from '../common/landCard/landCard';
+import NFTCard from '../common/NFTCard/NFTCard';
 import Header from '../Header/Header.js';
 import NavBar from '../Navbar/Navbar';
 import Loader from '../common/assets/images/Loader.svg';
@@ -15,7 +14,7 @@ const FaChevron = Icons['fa-chevron-right'];
 
 class LandingPage extends React.Component {
   componentWillMount = () => {
-    // this.props.actions.initCards();
+    
   };
   render() {
     const { cards } = this.props;
@@ -36,7 +35,7 @@ class LandingPage extends React.Component {
             {this.props.isFetching ? (
               <img src={Loader} alt="Loading" className="Loader" />
             ) : (
-              cards.map((e, i) => <LandCard {...e} index={i} normal />)
+              cards.map((e, i) => <NFTCard {...e} index={i} normal />)
             )}
           </div>
         </div>
@@ -56,11 +55,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch),
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
 )(LandingPage);

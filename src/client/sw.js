@@ -3,8 +3,7 @@
 workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
 self.addEventListener('fetch', function (event) {
-  console.log('fetch', event.request)
-
+  
   event.respondWith(
     caches.match(event.request)
       .then(function (response) {

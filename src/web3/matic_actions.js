@@ -30,7 +30,7 @@ export const approveToken = (from, amount= '1000000000000000000', activity) => {
             from,
             onTransactionHash: (hash) => {
                 // action on Transaction success
-                console.log(hash, 'approve hash'); // eslint-disable-line
+                console.log('approve hash', hash); // eslint-disable-line
                 activity(hash);
             },
         })
@@ -54,39 +54,10 @@ export const depositeToken = (from, amount= '1000000000000000000', activity) => 
         from,
         onTransactionHash: (hash) => {
             // action on Transaction success
-            console.log(hash, 'deposite hash'); // eslint-disable-line
+            console.log('deposite hash', hash); // eslint-disable-line
             activity(hash);
         },
     });
-}
-
-export const transferToken = (from, amount= '1000000000000000000', recipient, activity) => {
-    const matic = getMatic()
-    const token = config.MATIC_TEST_TOKEN // test token address
-
-    // Send Tokens
-    return matic.transferTokens(token, recipient, amount, {
-        from,
-        // parent: true, // For token transfer on Main network (false for Matic Network)
-        onTransactionHash: (hash) => {
-            // action on Transaction success
-            console.log(hash, 'transfer token') // eslint-disable-line
-            activity(hash);
-        },
-    })
-}
-
-export const withdrawToken = (from, amount= '1000000000000000000', activity) => {
-    const matic = getMatic()
-    return matic
-        .startWithdraw(token, amount, {
-            from,
-            onTransactionHash: (hash) => {
-                //  console.log("Withdraw Initiated")
-                console.log(hash, 'withdrawToken') // eslint-disable-line
-                activity(hash)
-            },
-        })
 }
 
 export const getBalanceMatic = async (from) => {

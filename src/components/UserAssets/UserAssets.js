@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import LandCard from '../common/landCard/landCard';
-import { bindActionCreators } from 'redux';
-import * as actions from '../../actions/initActions';
-import './address.scss';
+import NFTCard from '../common/NFTCard/NFTCard';
+import './UserAssets.scss';
 import masterNTFList from '../../data/NFTList.json'
 
-class Address extends React.Component {
+class UserAssets extends React.Component {
 
   get userNfts() {
     return masterNTFList.filter(nft => {
@@ -24,7 +22,7 @@ class Address extends React.Component {
                 <img src={Loader} alt="Loading" className="Loader" />
               ) : (
                 this.userNfts.map((e, i) => (
-                  <LandCard {...e} key={i} index={i} normal />
+                  <NFTCard {...e} key={i} index={i} normal />
                 ))
               )}
             </div>
@@ -35,7 +33,7 @@ class Address extends React.Component {
   }
 }
 
-Address.propTypes = {};
+UserAssets.propTypes = {};
 
 const mapStateToProps = (state) => {
   const top12 = state.user.erc721;
@@ -44,11 +42,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actions, dispatch),
-});
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Address);
+  mapStateToProps
+)(UserAssets);

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import {Link } from 'react-router-dom';
-import './land-card.scss'
+import './nft-card.scss'
 import MANA from '../assets/images/MANA.png';
 import WETH from '../assets/images/WETH.png';
 import ETH from '../assets/images/ETH.png';
 
-class LandCard extends React.Component {
+class NFTCard extends React.Component {
   render () {
     const token = this.props.order_metadata.lowest_sell_order.payment_token.symbol;
     const price = this.props.order_metadata.lowest_sell_order.payment_token_price;
@@ -45,6 +45,6 @@ class LandCard extends React.Component {
   }
 }
 
-LandCard.propTypes = {}
+NFTCard.propTypes = {}
 
-export default LandCard
+export default NFTCard
