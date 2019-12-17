@@ -1,28 +1,35 @@
 const ethUtils = require('ethereumjs-util')
-const sigUtils = require('eth-sig-util')
 
-exports.getTypedData = function ({
-    orderId, token2, amount2, tokenAddress, spender, tokenIdOrAmount, expiration
-}){
-    const data = getOrderData(orderId, token2, amount2);
-    return getTransferTypedData({
-      tokenAddress, spender, tokenIdOrAmount, data, expiration
-    });
-}
-
-function getOrderData({
-    orderId, token2, amount2
+export async function getSig({
+  spender,
+  orderId,
+  expiration,
+  token1,
+  amount1,
+  token2,
+  amount2
 }) {
-    const orderData = Buffer.concat([
-        ethUtils.toBuffer(orderId),
-        ethUtils.toBuffer(token2),
-        ethUtils.setLengthLeft(amount2, 32)
-    ]);
-    const orderDataHash = ethUtils.keccak256(orderData)
-    return orderDataHash;
+  const orderData = Buffer.concat([
+    ethUtils.toBuffer(orderId),
+    ethUtils.toBuffer(token2),
+    ethUtils.setLengthLeft(amount2, 32)
+  ])
+  const orderDataHash1 = ethUtils.keccak256(orderData)
+  const orderDataHash = '0x' + orderDataHash1.toString('hex');
+  
+  const typedData = getTransferTypedData({
+    spender: spender,
+    data: orderDataHash,
+    tokenIdOrAmount: amount1,
+    tokenAddress: token1,
+    expiration: expiration
+  })
+
+  const sig = await signTypedData(typedData)
+  return sig;
 }
 
-function getTransferTypedData ({
+function getTransferTypedData({
   tokenAddress,
   spender,
   tokenIdOrAmount,
@@ -52,6 +59,34 @@ function getTransferTypedData ({
     },
     primaryType: "TokenTransferOrder",
     message: {
+      spender,
+      tokenIdOrAmount,
+      data,
+      expiration
     }
   }
+}
+
+async function signTypedData(data) {
+  const from = (await window.web3.eth.getAccounts())[0]
+  const params = [from, JSON.stringify(data)]
+  const method = 'eth_signTypedData_v3'
+  // promise
+  return new Promise((resolve, reject) => {
+    window.web3.currentProvider.sendAsync(
+      {
+        method,
+        params,
+        from
+      },
+      (err, result) => {
+        const e = err || (result && result.error)
+        if (e) {
+          reject(e)
+        } else {
+          resolve(result)
+        }
+      }
+    )
+  })
 }
