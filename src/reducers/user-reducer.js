@@ -49,7 +49,7 @@ const loginFormReducer = (state = initialState, actions) => {
     case actionTypes.REMOVE_ERC721 : {
       const id = actions.id;
       const newState = {...state};
-      newState.erc721 = newState.erc721.reduce((e) => id!==e)
+      newState.erc721 = newState.erc721.filter((e) => id!==e)
       return newState;
     }
 

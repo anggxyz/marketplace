@@ -48,5 +48,5 @@ export default (wallet) => {
     ).send({
         from: wallet, // can be called from any address (as long as the signatures are authentic)
         gas: 6721975
-    }).on('transactionHash', function (transactionHash) { console.log("swap tx - \t" + transactionHash) })
+    }).on('transactionHash', function (transactionHash) { console.info("swap tx - \t" + transactionHash) })
 }

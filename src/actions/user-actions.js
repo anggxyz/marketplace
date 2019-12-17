@@ -100,7 +100,7 @@ export const approve_token = () => async (dispatch, getState) => {
 export const deposit_token = () => async (dispatch, getState) => {
   const userState = getState().user;
   let h;
-  const allowance = await matic_js.depositeToken(userState.accounts[0], userState.add_fund, (hash) => {
+  const allowance = await matic_js.depositToken(userState.accounts[0], userState.add_fund, (hash) => {
     dispatch(activity_actions.add_new_activity(hash, `You added ${userState.add_fund} MANA to Matic Network`))
     dispatch(push('/activity'));
     h = hash;
@@ -112,7 +112,7 @@ export const deposit_token = () => async (dispatch, getState) => {
 export const move_to_matic = (amount) => async (dispatch, getState) => {
   const userState = getState().user;
   let hash;
-  const allowance = await matic_js.depositeToken(userState.accounts[0], amount, (h) => {
+  const allowance = await matic_js.depositToken(userState.accounts[0], amount, (h) => {
     dispatch(activity_actions.add_new_activity(h, `You moved 60, -120 to Matic Network`))
     dispatch(push('/activity'));
     hash = h;
@@ -128,7 +128,7 @@ export const add_fund_change = (value) => ({
 export const depositERC721_token = (id) => async (dispatch, getState) => {
   const userState = getState().user;
   let h1, h2;
-  const allowance = await matic_js.depositeERC721Token(userState.accounts[0], id, (hash) => {
+  const allowance = await matic_js.depositERC721Token(userState.accounts[0], id, (hash) => {
     dispatch(activity_actions.add_new_activity(hash, `You approved tokenID: ${id} ERC721 token`))
     dispatch(push('/activity'));
     h1 = hash;
