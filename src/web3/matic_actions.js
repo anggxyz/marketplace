@@ -3,6 +3,8 @@ import Web3 from 'web3'
 import ERC20ABI from './ERC20ABI.json';
 import ERC721ABI from './ERC721ABI.json';
 import DepositManagerABI from './DepositManagerABI.json';
+import MarketplaceABI from './MarketplaceABI.json';
+import { async } from 'q';
 
 export const approveToken = async (from, amount= '1000000000000000000', activity) => {
   const web3 = window.web3;
@@ -91,4 +93,18 @@ export const depositERC721Token = async (from, tokenId, approve, deposit) => {
   deposit(depositHash);
   
   return;
+}
+
+export const executeSwap = async (data1, data2, orderId, expiration) => {
+  const address2 = (await window.web3.eth.getAccounts())[0];
+  const marketplaceContract = new window.web3.eth.Contract(MarketplaceABI, config.MARKETPLACE_ADDRESS);
+  const { receipt } = await marketplaceContract.methods.executeOrder(
+    data1,
+    data2,
+    orderId,
+    expiration,
+    address2
+  ).send({from: address2})
+
+  console.log(receipt);
 }

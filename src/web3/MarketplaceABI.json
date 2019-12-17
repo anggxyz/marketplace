@@ -1,0 +1,32 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "data1",
+        "type": "bytes"
+      },
+      {
+        "name": "data2",
+        "type": "bytes"
+      },
+      {
+        "name": "orderId",
+        "type": "bytes32"
+      },
+      {
+        "name": "expiration",
+        "type": "uint256"
+      },
+      {
+        "name": "taker",
+        "type": "address"
+      }
+    ],
+    "name": "executeOrder",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

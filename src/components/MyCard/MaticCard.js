@@ -36,7 +36,9 @@ class MaticCard extends React.Component {
   }
 
   buyHandler = () => {
-    this.setState({ ...this.state, buy: !this.state.buy });
+    const id = this.props.match.params.id;
+    this.props.actions.buy(parseInt(id), 1000);
+    // this.setState({ ...this.state, buy: !this.state.buy });
   };
 
   moveToMatic = () => {
@@ -44,9 +46,9 @@ class MaticCard extends React.Component {
     this.props.actions.depositERC721_token(id);
   }
 
-  swapActions = () => {
+  generateSellSig = () => {
     const id = this.props.match.params.id;
-    this.props.actions.swap_action(id);
+    this.props.actions.generateSellSig(parseInt(id), 1000);
   }
 
   outHandler= () => {
@@ -129,13 +131,13 @@ class MaticCard extends React.Component {
                       <a >TRANSFER</a>
                     </div>
                     {
-                      buyBut ? 
+                      this.isOwner ? 
                       <div className="btn-buy">
-                        <a href="#">BUY</a>
+                        <a onClick={this.generateSellSig}>SELL</a>
                       </div>
                       :
-                      <div onClick={this.buyHandler} className="btn-buy">
-                        <a onClick={this.swapActions}>SELL</a>
+                      <div className="btn-buy">
+                        <a onClick={this.buyHandler}>BUY</a>
                       </div>
 
                     }

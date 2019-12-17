@@ -4,9 +4,9 @@ import { get, set } from '../services/ls-service';
 import Web3 from 'web3'
 import * as activity_actions from './activty_actions';
 import * as matic_js from '../web3/matic_actions';
-import swapUtils from '../web3/marketplaceUtils';
 import {push} from 'connected-react-router';
 import maticConfig from "../web3/matic-config";
+import {getSig} from "../web3/marketplaceUtils";
 
 export const matamask_login = (id) => async (dispatch) => {
 
@@ -143,48 +143,66 @@ export const depositERC721_token = (id) => async (dispatch, getState) => {
   dispatch(activity_actions.activity_succ(h2));
 }
 
-export const swap_action = (token) => async (dispatch, getState) => {
-  const userState = getState().user;
+export const generateSellSig = (tokenId, amount) => async (dispatch, getState) => {
+  const orderId = '0x468fc9c005382579139846222b7b0aebc9182ba073b2455938a86d9753bfb078'
+  const latestBlock = await window.web3.eth.getBlock("latest");
+  const expiration = latestBlock.number + 10000;
+  
+  let sellSig;
+  try {
+    sellSig = await getSig({
+      token1: maticConfig.MATIC_ERC721_TEST_TOKEN,
+      amount1: tokenId,
+      token2: maticConfig.MATIC_TEST_TOKEN,
+      amount2: amount,
+      orderId: orderId,
+      spender: maticConfig.MARKETPLACE_ADDRESS,
+      expiration: expiration,
+    })
+  } catch (e) {
+    console.error(e)
+  }
 
-  const mappedErc20 = '0x75c2297b3a0157aB2815D40D17c1C8b45d5eAF3b';
-  const mappedErc721 = '0x4dDf4f09E98309B8Bd1DAdFDa175004eE0662d76';
-  const order = '0x468fc9c005382579139846222b7b0aebc9182ba073b2455938a86d9753bfb078';
-  const amount = 20;
-  const marketplace = '0xd21b65b72680dF167604dd55F7d7F16185AbEbF5';
-  const tokenId = token;
-  let signature;
+  if (sellSig && sellSig.result) {
+    dispatch({type : types.ADD_SIG, token: tokenId, sig: sellSig.result});
+    set(tokenId+'', sellSig.result);
+    const data1 = encode(maticConfig.MATIC_TEST_TOKEN, sellSig.result, tokenId);
+    console.log(data1);
 
-  const data = swapUtils.getTypedData({
-    orderId: order,
-    token2: mappedErc20,
-    amount2: amount,
-    tokenAddress: mappedErc721,
-    spender: marketplace,
-    tokenIdOrAmount: tokenId,
-    expiration: 0
-  })
-
-  await web3.currentProvider.sendAsync({
-    method: "eth_signTypedData_v3",
-    params: [userState.accounts[0], JSON.stringify(data)],
-    from: userState.accounts[0]
-  },
-  function(err, result) {
-      if(err) {
-        return console.error(err);
-      }
-      signature = result.result.substring(2);
-      // const r = "0x" + signature.substring(0, 64);
-      // const s = "0x" + signature.substring(64, 128);
-      // const v = parseInt(signature.substring(128, 130), 16);
-
-      dispatch({type : types.ADD_SIG, token, sig: signature});
-      set(token+'', signature);
-      const data1 = encode(mappedErc20, result.result, tokenId);
-    }
-  )
+  } else {
+    console.error("Error while signing data");
+  }
 }
 
+export const buy = (tokenId, amount) => async (dispatch, getState) => {
+  const orderId = '0x468fc9c005382579139846222b7b0aebc9182ba073b2455938a86d9753bfb078'
+  const latestBlock = await window.web3.eth.getBlock("latest");
+  const expiration = latestBlock.number + 10000;
+  
+  let buySig;
+  try {
+    buySig = await getSig({
+      token1: maticConfig.MATIC_TEST_TOKEN,
+      amount1: amount,
+      token2: maticConfig.MATIC_ERC721_TEST_TOKEN,
+      amount2: tokenId,
+      orderId: orderId,
+      spender: maticConfig.MARKETPLACE_ADDRESS,
+      expiration: expiration,
+    })
+  } catch (e) {
+    console.error(e)
+  }
+
+  if (buySig && buySig.result) {
+    const data2 = encode(maticConfig.MATIC_ERC721_TEST_TOKEN, buySig.result, amount);
+    console.log(data2);
+    const data1 = "0x0000000000000000000000009a93c912f4eff0254d178a18acd980c1b05b57b0000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000006c60000000000000000000000000000000000000000000000000000000000000041255a290497ba7793b607f07b148f83d15fff190a47d1c1d0c426460fb787ac6c13f6d4c8c90b8bd006657a403f57c4285fa566e0ad56ef153eda19c4d49da2cd1c00000000000000000000000000000000000000000000000000000000000000";
+    matic_js.executeSwap(data1, data2, orderId, expiration)
+  } else {
+    console.error("Error while signing data");
+  }
+}
 
 function encode(token, sig, tokenIdOrAmount) {
   return web3.eth.abi.encodeParameters(
@@ -192,3 +210,4 @@ function encode(token, sig, tokenIdOrAmount) {
     [token, sig, '0x' + tokenIdOrAmount.toString(16)]
   )
 }
+
