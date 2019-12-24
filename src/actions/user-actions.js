@@ -159,7 +159,6 @@ export const depositERC721_token = (id) => async (dispatch, getState) => {
 
 export const generateSellSig = (tokenId, amount) => async (dispatch, getState) => {
   const orderId = '0x468fc9c005382579139846222b7b0aebc9182ba073b2455938a86d9753bfb078'
-  const latestBlock = await window.web3.eth.getBlock("latest");
   const expiration = 0;
   
   let sellSig;
@@ -196,9 +195,8 @@ export const generateSellSig = (tokenId, amount) => async (dispatch, getState) =
 
 export const buy = (tokenId, amount) => async (dispatch, getState) => {
   const orderId = '0x468fc9c005382579139846222b7b0aebc9182ba073b2455938a86d9753bfb078'
-  const latestBlock = await window.web3.eth.getBlock("latest");
   const expiration = 0;
-  
+
   let buySig;
   try {
     buySig = await getSig({
@@ -216,7 +214,7 @@ export const buy = (tokenId, amount) => async (dispatch, getState) => {
 
   if (buySig && buySig.result) {
     const data2 = encode(maticConfig.MATIC_TEST_TOKEN, buySig.result, amount);
-    console.log("sellSig", sellSig.result)
+    console.log("buySig", buySig.result)
     console.log(data2);
 
     if (!firebase.apps || !firebase.apps.length) {

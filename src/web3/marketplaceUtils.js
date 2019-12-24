@@ -1,50 +1,42 @@
 const ethUtils = require('ethereumjs-util')
 
 export async function getSig({ spender, orderId, expiration, token1, amount1, token2, amount2 }) {
-  const domain = [
-    { name: "name", type: "string" },
-    { name: "version", type: "string" },
-    { name: "chainId", type: "uint256" },
-    { name: "contract", type: "address" }
-  ];
-  const tokenTransferOrder = [
-    { name: "spender", type: "address" },
-    { name: "tokenIdOrAmount", type: "uint256" },
-    { name: "data", type: "bytes32" },
-    { name: "expiration", type: "uint256" }
-  ];
   const orderData = Buffer.concat([
     ethUtils.toBuffer(orderId),
     ethUtils.toBuffer(token2),
     ethUtils.setLengthLeft(amount2, 32)
   ]);
-  const orderDataHash1 = ethUtils.keccak256(orderData);
-  const orderDataHash = '0x' + orderDataHash1.toString('hex');
-
-  const domainData = {
-    name: "Matic Netwoork",
-    version: "1",
-    chainId: 15001,
-    verifyingContract: token1
-  };
-
-  var message = {
-    spender: spender,
-    tokenIdOrAmount: amount1,
-    data: orderDataHash,
-    expiration: expiration
-  };
+  const orderDataHash = ethUtils.bufferToHex(ethUtils.keccak256(orderData));
 
   const typedDataObject = {
     types: {
-      EIP712Domain: domain,
-      TokenTransferOrder: tokenTransferOrder
+      EIP712Domain: [
+        { name: "name", type: "string" },
+        { name: "version", type: "string" },
+        { name: "chainId", type: "uint256" },
+        { name: "contract", type: "address" }
+      ],
+      TokenTransferOrder: [
+        { name: "spender", type: "address" },
+        { name: "tokenIdOrAmount", type: "uint256" },
+        { name: "data", type: "bytes32" },
+        { name: "expiration", type: "uint256" }
+      ]
     },
-    domain: domainData,
+    domain: {
+      name: "Matic Network",
+      version: "1",
+      chainId: 15001,
+      contract: token1
+    },
     primaryType: "TokenTransferOrder",
-    message: message
+    message: {
+      spender: spender,
+      tokenIdOrAmount: amount1,
+      data: orderDataHash,
+      expiration: expiration
+    }
   }
-
   const signer = (await window.web3.eth.getAccounts())[0];
   return new Promise((res, rej) => {
     window.web3.currentProvider.sendAsync(
