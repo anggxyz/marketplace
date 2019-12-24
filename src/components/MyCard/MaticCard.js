@@ -37,7 +37,7 @@ class MaticCard extends React.Component {
 
   buyHandler = () => {
     const id = this.props.match.params.id;
-    this.props.actions.buy(parseInt(id), 1000);
+    this.props.actions.buy(parseInt(id), 1);
     // this.setState({ ...this.state, buy: !this.state.buy });
   };
 
@@ -48,7 +48,7 @@ class MaticCard extends React.Component {
 
   generateSellSig = () => {
     const id = this.props.match.params.id;
-    this.props.actions.generateSellSig(parseInt(id), 1000);
+    this.props.actions.generateSellSig(parseInt(id), 1);
   }
 
   outHandler= () => {

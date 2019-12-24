@@ -7,6 +7,19 @@ import * as matic_js from '../web3/matic_actions';
 import {push} from 'connected-react-router';
 import maticConfig from "../web3/matic-config";
 import {getSig} from "../web3/marketplaceUtils";
+import * as firebase from 'firebase/app';
+import 'firebase/firestore';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDJ3YaQnD0xlHWKpTe53drIBqd4wV5ANFU",
+  authDomain: "marketplace-2de90.firebaseapp.com",
+  databaseURL: "https://marketplace-2de90.firebaseio.com",
+  projectId: "marketplace-2de90",
+  storageBucket: "marketplace-2de90.appspot.com",
+  messagingSenderId: "1026915260043",
+  appId: "1:1026915260043:web:66ddfa6ae886821b5e268e",
+  measurementId: "G-11XKWXQQSM"
+};
 
 export const matamask_login = (id) => async (dispatch) => {
 
@@ -58,6 +71,7 @@ export const matamask_login = (id) => async (dispatch) => {
       dispatch({type : types.ADD_ERC721, erc721 : balanceERC721, sigs});
     }
     else {
+      alert("Please select supported network");
     }
 }
 
@@ -146,7 +160,7 @@ export const depositERC721_token = (id) => async (dispatch, getState) => {
 export const generateSellSig = (tokenId, amount) => async (dispatch, getState) => {
   const orderId = '0x468fc9c005382579139846222b7b0aebc9182ba073b2455938a86d9753bfb078'
   const latestBlock = await window.web3.eth.getBlock("latest");
-  const expiration = latestBlock.number + 10000;
+  const expiration = 0;
   
   let sellSig;
   try {
@@ -166,8 +180,14 @@ export const generateSellSig = (tokenId, amount) => async (dispatch, getState) =
   if (sellSig && sellSig.result) {
     dispatch({type : types.ADD_SIG, token: tokenId, sig: sellSig.result});
     set(tokenId+'', sellSig.result);
-    const data1 = encode(maticConfig.MATIC_TEST_TOKEN, sellSig.result, tokenId);
-    console.log(data1);
+    const data1 = encode(maticConfig.MATIC_ERC721_TEST_TOKEN, sellSig.result, tokenId);
+    console.log("sellSig", sellSig.result)
+    console.log("data1", data1);
+
+    if (!firebase.apps || !firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+    await firebase.firestore().collection('nfts').doc(tokenId+"").set({data1});
 
   } else {
     console.error("Error while signing data");
@@ -177,7 +197,7 @@ export const generateSellSig = (tokenId, amount) => async (dispatch, getState) =
 export const buy = (tokenId, amount) => async (dispatch, getState) => {
   const orderId = '0x468fc9c005382579139846222b7b0aebc9182ba073b2455938a86d9753bfb078'
   const latestBlock = await window.web3.eth.getBlock("latest");
-  const expiration = latestBlock.number + 10000;
+  const expiration = 0;
   
   let buySig;
   try {
@@ -195,10 +215,21 @@ export const buy = (tokenId, amount) => async (dispatch, getState) => {
   }
 
   if (buySig && buySig.result) {
-    const data2 = encode(maticConfig.MATIC_ERC721_TEST_TOKEN, buySig.result, amount);
+    const data2 = encode(maticConfig.MATIC_TEST_TOKEN, buySig.result, amount);
+    console.log("sellSig", sellSig.result)
     console.log(data2);
-    const data1 = "0x0000000000000000000000009a93c912f4eff0254d178a18acd980c1b05b57b0000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000006c60000000000000000000000000000000000000000000000000000000000000041255a290497ba7793b607f07b148f83d15fff190a47d1c1d0c426460fb787ac6c13f6d4c8c90b8bd006657a403f57c4285fa566e0ad56ef153eda19c4d49da2cd1c00000000000000000000000000000000000000000000000000000000000000";
-    matic_js.executeSwap(data1, data2, orderId, expiration)
+
+    if (!firebase.apps || !firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+    const storedData = (await firebase.firestore().collection('nfts').doc(tokenId+"").get()).data();
+    if (storedData && storedData.data1) {
+      const data1 = storedData.data1;
+      matic_js.executeSwap(data1, data2, orderId, expiration)
+    } else {
+      console.error("Error while fetching sell data");
+    }
+    
   } else {
     console.error("Error while signing data");
   }
@@ -210,4 +241,3 @@ function encode(token, sig, tokenIdOrAmount) {
     [token, sig, '0x' + tokenIdOrAmount.toString(16)]
   )
 }
-
