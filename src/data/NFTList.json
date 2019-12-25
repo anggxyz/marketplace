@@ -68,7 +68,7 @@
           "eth_price": "0.000176132419444",
           "usd_price": "0.026689345518276737"
         },
-        "payment_token_price": 1500,
+        "payment_token_price": 150000000000000000,
         "payment_token_bounty": 15,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -174,7 +174,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "151.680000000000006821"
         },
-        "payment_token_price": 0.42,
+        "payment_token_price": 420000000000000000,
         "payment_token_bounty": 0.0042,
         "is_expiring": true,
         "is_waiting_for_counterorder": true
@@ -281,7 +281,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "149.000000000000000000"
         },
-        "payment_token_price": 1,
+        "payment_token_price": 100000000000000000,
         "payment_token_bounty": 0.01,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -403,7 +403,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "147.740000000000009095"
         },
-        "payment_token_price": 0.9,
+        "payment_token_price": 900000000000000000,
         "payment_token_bounty": 0.009,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -521,7 +521,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "149.810000000000002274"
         },
-        "payment_token_price": 2.25,
+        "payment_token_price": 2250000000000000000,
         "payment_token_bounty": 0.0225,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -626,7 +626,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "147.819999999999993179"
         },
-        "payment_token_price": 0.05,
+        "payment_token_price": 50000000000000000,
         "payment_token_bounty": 0.0005,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -741,7 +741,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "153.900000000000005684"
         },
-        "payment_token_price": 0.2,
+        "payment_token_price": 200000000000000000,
         "payment_token_bounty": 0.002,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -859,7 +859,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "153.900000000000005684"
         },
-        "payment_token_price": 0.47,
+        "payment_token_price": 470000000000000000,
         "payment_token_bounty": 0.0047,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -980,7 +980,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "153.900000000000005684"
         },
-        "payment_token_price": 0.8,
+        "payment_token_price": 800000000000000000,
         "payment_token_bounty": 0.008,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -1082,7 +1082,7 @@
           "eth_price": "0.000167360918923",
           "usd_price": "0.024740964644360628"
         },
-        "payment_token_price": 2999,
+        "payment_token_price": 299900000000000000,
         "payment_token_bounty": 29.99,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -1190,7 +1190,7 @@
           "eth_price": "0.000168535343587",
           "usd_price": "0.025563440915309529"
         },
-        "payment_token_price": 2999,
+        "payment_token_price": 299900000000000000,
         "payment_token_bounty": 29.99,
         "is_expiring": false,
         "is_waiting_for_counterorder": false
@@ -1297,7 +1297,7 @@
           "eth_price": "1.000000000000000",
           "usd_price": "148.590000000000003411"
         },
-        "payment_token_price": 0.015,
+        "payment_token_price": 15000000000000000,
         "payment_token_bounty": 0.00015,
         "is_expiring": false,
         "is_waiting_for_counterorder": false

@@ -1,3 +1,4 @@
+import maticConfig from "../web3/matic-config";
 const ethUtils = require('ethereumjs-util')
 
 export async function getSig({ spender, orderId, expiration, token1, amount1, token2, amount2 }) {
@@ -26,13 +27,13 @@ export async function getSig({ spender, orderId, expiration, token1, amount1, to
     domain: {
       name: "Matic Network",
       version: "1",
-      chainId: 15001,
+      chainId: maticConfig.CHILD_NETWORK_ID,
       contract: token1
     },
     primaryType: "TokenTransferOrder",
     message: {
       spender: spender,
-      tokenIdOrAmount: amount1,
+      tokenIdOrAmount: amount1+"", // convert to string so numbers larger that 53 bits are handled correctly
       data: orderDataHash,
       expiration: expiration
     }

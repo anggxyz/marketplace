@@ -10,6 +10,10 @@ import MANA from '../common/assets/images/MANA.png';
 import WETH from '../common/assets/images/WETH.png';
 import ETH from '../common/assets/images/ETH.png';
 import maticConfig from "../../web3/matic-config";
+import BN from 'bignumber.js'
+
+const ZERO = new BN(0);
+const TEN = new BN(10);
 
 class MaticCard extends React.Component {
   id = null;
@@ -35,7 +39,7 @@ class MaticCard extends React.Component {
 
   buyHandler = () => {
     const id = this.props.match.params.id;
-    this.props.actions.buy(parseInt(id), 1);
+    this.props.actions.buy(parseInt(id), this.price.toNumber());
   };
 
   moveToMatic = () => {
@@ -45,7 +49,7 @@ class MaticCard extends React.Component {
 
   generateSellSig = () => {
     const id = this.props.match.params.id;
-    this.props.actions.generateSellSig(parseInt(id), 1);
+    this.props.actions.generateSellSig(parseInt(id), this.price.toNumber());
   }
 
   outHandler= () => {
@@ -54,7 +58,14 @@ class MaticCard extends React.Component {
 
   get price() {
     if (this.nftDetails && this.nftDetails.order_metadata.lowest_sell_order.payment_token_price) {
-      return this.nftDetails.order_metadata.lowest_sell_order.payment_token_price;
+      return new BN(this.nftDetails.order_metadata.lowest_sell_order.payment_token_price)
+    }
+    return "";
+  }
+
+  get formattedPrice() {
+    if (this.price) {
+      return this.price.div(TEN.pow(maticConfig.CURRENCY_DECIMALS)).dp(maticConfig.DISPLAY_DECIMALS).toString();
     }
     return "";
   }
@@ -112,7 +123,7 @@ class MaticCard extends React.Component {
                     </div>
                     <div className="val">
                       <img src={this.token === "MANA" ? MANA : this.token === "WETH" ? WETH : ETH}></img>
-                      <span>{this.price}</span>
+                      <span>{this.formattedPrice}</span>
                     </div>
                   </div>
                   <div className="line-2-btn">
