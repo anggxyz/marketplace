@@ -14,5 +14,15 @@ export default {
     'MAIN_NETWORK_ID': 3,
     'CHILD_NETWORK_ID': 15001,
     'CURRENCY_DECIMALS': 18,
-    'DISPLAY_DECIMALS': 2
+    'DISPLAY_DECIMALS': 2,
+    'firebaseConfig': {
+      'apiKey': "AIzaSyDJ3YaQnD0xlHWKpTe53drIBqd4wV5ANFU",
+      'authDomain': "marketplace-2de90.firebaseapp.com",
+      'databaseURL': "https://marketplace-2de90.firebaseio.com",
+      'projectId': "marketplace-2de90",
+      'storageBucket': "marketplace-2de90.appspot.com",
+      'messagingSenderId': "1026915260043",
+      'appId': "1:1026915260043:web:66ddfa6ae886821b5e268e",
+      'measurementId': "G-11XKWXQQSM"
+    }
   }

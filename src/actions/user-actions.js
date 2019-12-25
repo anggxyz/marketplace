@@ -10,17 +10,6 @@ import {getSig} from "../web3/marketplaceUtils";
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDJ3YaQnD0xlHWKpTe53drIBqd4wV5ANFU",
-  authDomain: "marketplace-2de90.firebaseapp.com",
-  databaseURL: "https://marketplace-2de90.firebaseio.com",
-  projectId: "marketplace-2de90",
-  storageBucket: "marketplace-2de90.appspot.com",
-  messagingSenderId: "1026915260043",
-  appId: "1:1026915260043:web:66ddfa6ae886821b5e268e",
-  measurementId: "G-11XKWXQQSM"
-};
-
 export const matamask_login = (id) => async (dispatch) => {
 
     if (!web3) {
@@ -178,7 +167,7 @@ export const generateSellSig = (tokenId, amount) => async (dispatch, getState) =
     console.log("data1", data1);
 
     if (!firebase.apps || !firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
+      firebase.initializeApp(maticConfig.firebaseConfig);
     }
     await firebase.firestore().collection('nfts').doc(tokenId+"").set({data1});
 
@@ -212,12 +201,13 @@ export const buy = (tokenId, amount) => async (dispatch, getState) => {
     console.log(data2);
 
     if (!firebase.apps || !firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
+      firebase.initializeApp(maticConfig.firebaseConfig);
     }
     const storedData = (await firebase.firestore().collection('nfts').doc(tokenId+"").get()).data();
     if (storedData && storedData.data1) {
       const data1 = storedData.data1;
-      matic_js.executeSwap(data1, data2, orderId, expiration)
+      await matic_js.executeSwap(data1, data2, orderId, expiration)
+      await firebase.firestore().collection('nfts').doc(tokenId+"").delete();
     } else {
       console.error("Error while fetching sell data");
     }
