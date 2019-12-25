@@ -42,8 +42,8 @@ export const matamask_login = (id) => async (dispatch) => {
     const accounts = await ethereum.enable();
     web3 = new Web3(window.web3.currentProvider) 
     var network = id || await web3.eth.net.getId();
-    
-    if(network==3) {
+
+    if(network == maticConfig.MAIN_NETWORK_ID) {
       const balance = await matic_js.getBalanceRopsten(accounts[0]);
       //c is 3 for repsten newtwork
       //c is more than 3 for other network
@@ -53,8 +53,8 @@ export const matamask_login = (id) => async (dispatch) => {
       dispatch(check_allowance());
       const balanceERC721 = await matic_js.getBalance721Ropsten(accounts[0]);
       dispatch({type : types.ADD_ERC721, erc721 : balanceERC721});
-    }
-    if(network==15001) {
+    
+    } else if(network == maticConfig.CHILD_NETWORK_ID) {
       const balance = await matic_js.getBalanceMatic(accounts[0]);
         //c is 3 for repsten newtwork
         //c is more than 3 for other network
@@ -69,8 +69,8 @@ export const matamask_login = (id) => async (dispatch) => {
         }
       });
       dispatch({type : types.ADD_ERC721, erc721 : balanceERC721, sigs});
-    }
-    else {
+    
+    } else {
       alert("Please select supported network");
     }
 }

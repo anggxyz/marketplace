@@ -17,32 +17,38 @@ import MyCard from '../components/MyCard/MaticCard';
 import MaticNetwork from '../components/MaticNetwork/MaticNetwork.js';
 import UserAssets from '../components/UserAssets/UserAssets';
 import NotPartOfDesign from '../components/NotPartOfDesign/NotPartOfDesign.js'
+import maticConfig from "../web3/matic-config";
 import { store } from '../index';
 
 class Routes extends Component {
 
   componentDidMount = () => {
 
-    window.onbeforeunload = function() {
-      return "Prevent reload"
-    }
-    
     if (!window.web3) {
       window.alert('Please allow Metmask');
       return;
     }
 
-    const web3 = window.web3 ?
-        new Web3(window.web3.currentProvider) :
-        new Web3(new Web3("https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc")); //TODO insert custom key
+    const network = window.ethereum.networkVersion;
+    if (network != maticConfig.MAIN_NETWORK_ID && network != maticConfig.CHILD_NETWORK_ID) {
+      alert("Please select supported network");
+    } else {
+      store.dispatch(actions.matamask_login());
+    }
 
     window.ethereum.autoRefreshOnNetworkChange = false;
+    
     window.ethereum.on('networkChanged', (e) => {
       if (e == "loading") {
         return;
       }
+      if (e != maticConfig.MAIN_NETWORK_ID && e != maticConfig.CHILD_NETWORK_ID) {
+        alert("Please select supported network");
+        return;
+      }
       store.dispatch(actions.matamask_login(e));
     })
+
     window.ethereum.on('accountsChanged', function (accounts) {
       store.dispatch(actions.matamask_login());
     })
