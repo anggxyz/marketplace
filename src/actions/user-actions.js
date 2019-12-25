@@ -45,20 +45,14 @@ export const matamask_login = (id) => async (dispatch) => {
 
     if(network == maticConfig.MAIN_NETWORK_ID) {
       const balance = await matic_js.getBalanceRopsten(accounts[0]);
-      //c is 3 for repsten newtwork
-      //c is more than 3 for other network
-      //so if c is greater than 3 we assume that it is on matic network
       dispatch({type: types.METAMASK_LOGIN, payload : accounts, network , balance: balance});
       dispatch(login_popup_c());
       dispatch(check_allowance());
       const balanceERC721 = await matic_js.getBalance721Ropsten(accounts[0]);
       dispatch({type : types.ADD_ERC721, erc721 : balanceERC721});
-    
+
     } else if(network == maticConfig.CHILD_NETWORK_ID) {
       const balance = await matic_js.getBalanceMatic(accounts[0]);
-        //c is 3 for repsten newtwork
-        //c is more than 3 for other network
-        //so if c is greater than 3 we assume that it is on matic network
       dispatch({type: types.METAMASK_LOGIN, payload : accounts, network , balance: balance});
       dispatch(login_popup_c());
       const balanceERC721 = await matic_js.getBalance721Matic(accounts[0]);
@@ -69,7 +63,7 @@ export const matamask_login = (id) => async (dispatch) => {
         }
       });
       dispatch({type : types.ADD_ERC721, erc721 : balanceERC721, sigs});
-    
+
     } else {
       alert("Please select supported network");
     }

@@ -2,9 +2,6 @@ import React from 'react';
 import './MaticCard.scss';
 import '../Navbar/Navbar.scss';
 
-import Popup from '../common/popup/Popup.js';
-import LoginPopup from '../common/popup/loginPopup.js';
-import wallet from '../common/assets/images/square.png';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
 import * as actions from '../../actions/user-actions'
@@ -12,6 +9,7 @@ import masterNFTList from '../../data/NFTList.json'
 import MANA from '../common/assets/images/MANA.png';
 import WETH from '../common/assets/images/WETH.png';
 import ETH from '../common/assets/images/ETH.png';
+import maticConfig from "../../web3/matic-config";
 
 class MaticCard extends React.Component {
   id = null;
@@ -38,7 +36,6 @@ class MaticCard extends React.Component {
   buyHandler = () => {
     const id = this.props.match.params.id;
     this.props.actions.buy(parseInt(id), 1);
-    // this.setState({ ...this.state, buy: !this.state.buy });
   };
 
   moveToMatic = () => {
@@ -71,13 +68,8 @@ class MaticCard extends React.Component {
 
   render() {
     const networkID = this.props.networkID;
-    const id = this.props.match.params.id;
     const sigs = this.props.sigs;
-    let buyBut = false;
-    if(sigs[id]) {
-      buyBut = true;
-    }
-    
+
     return (
       <div>
         <div onClick={this.outHandler} className="card">
@@ -124,7 +116,7 @@ class MaticCard extends React.Component {
                     </div>
                   </div>
                   <div className="line-2-btn">
-                    {networkID==3 && <div onClick={this.moveToMatic} className="btn-bid">
+                    {networkID == maticConfig.MAIN_NETWORK_ID && <div onClick={this.moveToMatic} className="btn-bid">
                       <a href="#">MOVE TO MATIC</a>
                     </div>}
                     <div onClick={this.buyHandler} className="btn-bid">

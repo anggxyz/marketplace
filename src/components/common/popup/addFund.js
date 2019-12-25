@@ -6,6 +6,7 @@ import * as popupActions from '../../../actions/popup_actions';
 import * as userActions from '../../../actions/user-actions';
 import blue_dark from '../assets/images/blue_dark.svg';
 import balance from '../assets/images/balance-icon.svg';
+import maticConfig from "../../../web3/matic-config";
 import './addFund.scss';
 
 
@@ -60,7 +61,7 @@ class AddFund extends React.Component {
             </span>
             {' '}
             {
-            networkID === 3 ?
+            networkID === maticConfig.MAIN_NETWORK_ID ?
             "in Ropsten Network"
             : "in Matic Network"
             }

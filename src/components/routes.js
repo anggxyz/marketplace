@@ -16,7 +16,6 @@ import Activity from '../components/Activity/Activity.js';
 import MyCard from '../components/MyCard/MaticCard';
 import MaticNetwork from '../components/MaticNetwork/MaticNetwork.js';
 import UserAssets from '../components/UserAssets/UserAssets';
-import NotPartOfDesign from '../components/NotPartOfDesign/NotPartOfDesign.js'
 import maticConfig from "../web3/matic-config";
 import { store } from '../index';
 
@@ -80,7 +79,6 @@ class Routes extends Component {
               <Route exact path="/mycard/:id" component={MyCard} />
               <Route exact path="/maticnetwork" component={MaticNetwork} />
               <Route exact path="/userassets" component={UserAssets} />
-              <Route exact path="/notpartofdesign" component={NotPartOfDesign}/>
             </Switch>
           </div>
         </div>
